@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  text-align: center;
+  padding: 18px;
+  background: #1e293b;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Search */
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+input {
+  padding: 12px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 8px #38bdf8;
+}
+
+/* Stats */
+.stats {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.filter-buttons button {
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: 1px solid #38bdf8;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closed {
+  background: gray;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Hover */
+.filter-buttons button:hover {
+  background: #38bdf8;
+  color: black;
+  transform: scale(1.05);
+}
+.filter-buttons .active {
+  background: #38bdf8;
+  color: black;
+}
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 15px;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  padding: 18px;
+  border-radius: 16px;
+  transition: 0.3s;
+  animation: fadeIn 0.6s ease-in;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Info */
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* Tags */
+.tag-upcoming {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.tag-past {
+  color: #f87171;
+  font-weight: bold;
+}
+
+/* Button */
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Unregister Button */
+.unregister {
+  background: crimson;
+}
+
+.unregister:hover {
+  background: #dc2626;
+}
+
+/* Disabled (if still used anywhere) */
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Center text */
+.center {
+  text-align: center;
+  margin-top: 10px;
+}
